@@ -119,6 +119,7 @@ static const NSInteger kDefaultMaximumConnectionsPerHost = 6;
 @synthesize URLCredentialStorage = _URLCredentialStorage;
 @synthesize URLCache = _URLCache;
 @synthesize protocolClasses = _protocolClasses;
+@synthesize _sourceApplicationAuditTokenData = _sourceApplicationAuditTokenData;
 
 - (id)init
 {
@@ -146,6 +147,7 @@ static const NSInteger kDefaultMaximumConnectionsPerHost = 6;
     [_URLCredentialStorage release];
     [_URLCache release];
     [_protocolClasses release];
+    [_sourceApplicationAuditTokenData release];
     [super dealloc];
 }
 
@@ -172,6 +174,7 @@ static const NSInteger kDefaultMaximumConnectionsPerHost = 6;
     copy->_URLCredentialStorage = [_URLCredentialStorage retain];
     copy->_URLCache = [_URLCache retain];
     copy->_protocolClasses = [_protocolClasses copy];
+    copy->_sourceApplicationAuditTokenData = [_sourceApplicationAuditTokenData copy];
     return copy;
 }
 

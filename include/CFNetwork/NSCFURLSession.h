@@ -29,7 +29,10 @@ __attribute__((visibility("hidden")))
     NSURLCredentialStorage *_URLCredentialStorage;
     NSURLCache *_URLCache;
     NSArray *_protocolClasses;
+    NSData *_sourceApplicationAuditTokenData;
 }
+// Private: the process on whose behalf requests are made. Kept, not acted on.
+@property (copy) NSData *_sourceApplicationAuditTokenData;
 @end
 
 __attribute__((visibility("hidden")))
